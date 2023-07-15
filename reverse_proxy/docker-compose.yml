@@ -8,6 +8,11 @@ services:
       - site2
     ports:
       - 80:80
+      - 443:443
+    volumes:
+      - ./config:/config
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /tmp/acme-challenge:/tmp/acme-challenge
 
 networks:
   site1:
