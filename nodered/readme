@@ -1,0 +1,5 @@
+# Per creare un'immagine custom bisogna creare un Dockerfile e poi fare il build dell'immagine
+docker build -t node-red-custom .
+
+# Per eseguire l'immagine creata
+docker run -d -p 1880:1880 --name mynodered node-red-custom

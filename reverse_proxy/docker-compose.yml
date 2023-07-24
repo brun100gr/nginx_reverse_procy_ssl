@@ -6,6 +6,7 @@ services:
     networks:
       - site1
       - site2
+      - nodered
     ports:
       - 80:80
       - 443:443
@@ -21,3 +22,6 @@ networks:
   site2:
     external:
       name: site2_default
+  nodered:
+    external:
+      name: nodered_default

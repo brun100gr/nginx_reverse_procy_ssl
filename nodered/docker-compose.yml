@@ -1,0 +1,7 @@
+version: '3'
+services:
+  nodered:
+    container_name: "nodered"
+    build: ./
+    expose:
+      - "1880"
