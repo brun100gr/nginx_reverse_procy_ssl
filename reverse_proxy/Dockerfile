@@ -10,7 +10,7 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./sites-available /etc/nginx/sites-available/
 COPY ./sites-enabled /etc/nginx/sites-enabled/
 RUN ln -s /etc/nginx/sites-available/brunomarelli.duckdns.org.conf /etc/nginx/sites-enabled/
-RUN ln -s /etc/nginx/sites-available/brunomarelli01.duckdns.org.conf /etc/nginx/sites-enabled/
+#RUN ln -s /etc/nginx/sites-available/brunomarelli01.duckdns.org.conf /etc/nginx/sites-enabled/
 
 # NOT FOUND response
 COPY ./backend-not-found.html /var/www/html/backend-not-found.html

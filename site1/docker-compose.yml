@@ -1,9 +1,0 @@
-version: '3'
-services:
-  app:
-    image: nginx:latest
-    container_name: "site1"
-    volumes:
-      - .:/usr/share/nginx/html/
-    expose:
-      - "80"

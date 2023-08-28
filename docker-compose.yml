@@ -1,0 +1,26 @@
+version: '3'
+services:
+  reverse_proxy:
+    container_name: reverse_proxy
+    build:
+      context: reverse_proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /tmp/acme-challenge:/tmp/acme-challenge
+    
+  site1:
+    container_name: site1
+    build:
+      context: ./site1
+
+  node-red:
+    container_name: node-red
+    build:
+      context: ./node-red
+    user: "1000:1000"
+    volumes:
+      - ./node-red/node-red_data:/data
+
