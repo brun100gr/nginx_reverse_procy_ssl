@@ -22,4 +22,4 @@ COPY ./includes/ /etc/nginx/includes/
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 # .htpasswd
-COPY ./.htpasswd /etc/nginx/.htpasswd_with_passwords
+COPY ./.htpasswd_with_passwords /etc/nginx/.htpasswd

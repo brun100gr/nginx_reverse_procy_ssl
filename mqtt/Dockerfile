@@ -1,4 +1,5 @@
 FROM eclipse-mosquitto:latest
 
 # .htpasswd
-COPY ../reverse_proxy/.htpasswd /etc/mqtt/.htpasswd_with_passwords
+#COPY ./config/.htpasswd_with_passwords /mosquitto/config/.htpasswd
+COPY ./config/.htpasswd_with_passwords /tmp/.htpasswd
